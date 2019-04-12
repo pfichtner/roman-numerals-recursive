@@ -37,7 +37,7 @@ public class ArabToRomTest {
 			return "V" + arabToRom(arab - 5);
 		}
 		if (arab == 5) {
-			return "V";
+			return "V" + arabToRom(arab - 5);
 		}
 		if (arab >= 1) {
 			return "I" + arabToRom(arab - 1);
