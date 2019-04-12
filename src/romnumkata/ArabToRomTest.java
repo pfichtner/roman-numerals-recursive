@@ -34,7 +34,7 @@ public class ArabToRomTest {
 
 	private String arabToRom(int arab) {
 		if (arab == 6) {
-			return "V" + arabToRom(1);
+			return "V" + arabToRom(arab-5);
 		}
 		if (arab == 5) {
 			return "V";
