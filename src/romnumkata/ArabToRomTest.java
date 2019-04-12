@@ -22,6 +22,11 @@ public class ArabToRomTest {
 		assertThat(arabToRom(3), is("III"));
 	}
 
+	@Test
+	void canConvert5() {
+		assertThat(arabToRom(5), is("V"));
+	}
+
 	private String arabToRom(int arab) {
 		if (arab >= 1) {
 			return "I" + arabToRom(arab - 1);
