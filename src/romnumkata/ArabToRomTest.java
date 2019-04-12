@@ -4,49 +4,28 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 import java.util.EnumSet;
-import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
 
 public class ArabToRomTest {
 
 	@Test
-	void canConvert1() {
+	void symbols() {
 		assertThat(arabToRom(1), is("I"));
-	}
-
-	@Test
-	void canConvert2() {
-		assertThat(arabToRom(2), is("II"));
-	}
-
-	@Test
-	void canConvert3() {
-		assertThat(arabToRom(3), is("III"));
-	}
-
-	@Test
-	void canConvert5() {
 		assertThat(arabToRom(5), is("V"));
 	}
 
 	@Test
-	void canConvert6() {
+	void additions() {
+		assertThat(arabToRom(2), is("II"));
+		assertThat(arabToRom(3), is("III"));
 		assertThat(arabToRom(6), is("VI"));
-	}
-
-	@Test
-	void canConvert11() {
 		assertThat(arabToRom(11), is("XI"));
 	}
 
 	@Test
-	void canConvert4() {
+	void substractions() {
 		assertThat(arabToRom(4), is("IV"));
-	}
-
-	@Test
-	void canConvert9() {
 		assertThat(arabToRom(9), is("IX"));
 	}
 
