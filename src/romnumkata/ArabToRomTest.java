@@ -38,7 +38,7 @@ public class ArabToRomTest {
 	}
 
 	private static enum Numeral {
-		X(10);
+		X(10), V(5);
 		private int value;
 
 		private Numeral(int value) {
@@ -47,10 +47,12 @@ public class ArabToRomTest {
 	}
 
 	private String arabToRom(int arab) {
-		Numeral n = Numeral.X;
+		Numeral n;
+		n = Numeral.X;
 		if (arab >= n.value) {
 			return n.name() + arabToRom(arab - n.value);
 		}
+		n = Numeral.V;
 		if (arab >= 5) {
 			return "V" + arabToRom(arab - 5);
 		}
