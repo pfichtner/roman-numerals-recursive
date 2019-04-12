@@ -13,7 +13,7 @@ public class ArabToRomTest {
 		assertThat(arabToRom(1), is("I"));
 	}
 
-	private Object arabToRom(int i) {
+	private String arabToRom(int arab) {
 		return "I";
 	}
 
