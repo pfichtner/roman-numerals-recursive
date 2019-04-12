@@ -36,10 +36,14 @@ public class ArabToRomTest {
 	void canConvert11() {
 		assertThat(arabToRom(11), is("XI"));
 	}
+	
+	private static enum Numeral {
+		X
+	}
 
 	private String arabToRom(int arab) {
 		if (arab >= 10) {
-			return "X" + arabToRom(arab - 10);
+			return Numeral.X.name() + arabToRom(arab - 10);
 		}
 		if (arab >= 5) {
 			return "V" + arabToRom(arab - 5);
