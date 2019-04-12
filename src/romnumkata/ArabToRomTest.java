@@ -14,8 +14,7 @@ public class ArabToRomTest {
 	}
 
 	private Object arabToRom(int i) {
-		// TODO Auto-generated method stub
-		return null;
+		return "I";
 	}
 
 }
