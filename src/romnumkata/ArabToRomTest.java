@@ -60,7 +60,8 @@ public class ArabToRomTest {
 	}
 
 	private String arabToRom(int arab) {
-		return EnumSet.allOf(Numeral.class).stream().filter(n->arab >= n.value).map(n->n.name() + arabToRom(arab - n.value)).findFirst().orElse("");
+		return EnumSet.allOf(Numeral.class).stream().filter(n -> arab >= n.value)
+				.map(n -> n.name() + arabToRom(arab - n.value)).findFirst().orElse("");
 	}
 
 }
