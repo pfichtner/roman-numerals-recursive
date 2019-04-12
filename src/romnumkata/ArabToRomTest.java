@@ -44,7 +44,7 @@ public class ArabToRomTest {
 				.map(n -> n.name() + arabToRom(arab - n.value)).findFirst().orElse("");
 	}
 
-	private Stream<Numeral> numerals() {
+	private static Stream<Numeral> numerals() {
 		return EnumSet.allOf(Numeral.class).stream();
 	}
 
