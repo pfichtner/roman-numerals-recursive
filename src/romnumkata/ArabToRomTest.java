@@ -48,7 +48,7 @@ public class ArabToRomTest {
 	}
 
 	private static enum Numeral {
-		X(10), IV(9), V(5), IV(4), I(1);
+		X(10), IX(9), V(5), IV(4), I(1);
 		private int value;
 
 		private Numeral(int value) {
