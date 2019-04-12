@@ -62,11 +62,6 @@ public class ArabToRomTest {
 	private String arabToRom(int arab) {
 		Stream<String> map = EnumSet.allOf(Numeral.class).stream().filter(n->arab >= n.value).map(n->n.name() + arabToRom(arab - n.value));
 		String result = map.findFirst().orElse("");
-		for (Numeral n : Numeral.values()) {
-			if (arab >= n.value) {
-				return n.name() + arabToRom(arab - n.value);
-			}
-		}
 		return result;
 	}
 
