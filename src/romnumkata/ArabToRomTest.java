@@ -24,13 +24,13 @@ public class ArabToRomTest {
 
 	private String arabToRom(int arab) {
 		if (arab == 3) {
-			return "I" + arabToRom(2);
+			return "I" + arabToRom(3 - 1);
 		}
 		if (arab == 2) {
-			return "I" + arabToRom(1);
+			return "I" + arabToRom(2 - 1);
 		}
-		if (arab==1) {
-			return "I" + arabToRom(0);
+		if (arab == 1) {
+			return "I" + arabToRom(1 - 1);
 		}
 		return "";
 	}
