@@ -42,6 +42,11 @@ public class ArabToRomTest {
 		assertThat(arabToRom(4), is("IV"));
 	}
 
+	@Test
+	void canConvert9() {
+		assertThat(arabToRom(9), is("IX"));
+	}
+
 	private static enum Numeral {
 		X(10), V(5), IV(4), I(1);
 		private int value;
