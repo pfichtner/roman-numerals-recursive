@@ -29,7 +29,7 @@ public class ArabToRomTest {
 		if (arab == 2) {
 			return "I" + arabToRom(arab - 1);
 		}
-		if (arab == 1) {
+		if (arab >= 1) {
 			return "I" + arabToRom(arab - 1);
 		}
 		return "";
