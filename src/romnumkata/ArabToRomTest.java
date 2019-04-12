@@ -38,6 +38,9 @@ public class ArabToRomTest {
 	}
 
 	private String arabToRom(int arab) {
+		if (arab >= 10) {
+			return "X" + arabToRom(arab - 10);
+		}
 		if (arab >= 5) {
 			return "V" + arabToRom(arab - 5);
 		}
