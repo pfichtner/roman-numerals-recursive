@@ -52,20 +52,6 @@ public class ArabToRomTest {
 				return n.name() + arabToRom(arab - n.value);
 			}
 		}
-		
-		Numeral n;
-		n = Numeral.X;
-		if (arab >= n.value) {
-			return n.name() + arabToRom(arab - n.value);
-		}
-		n = Numeral.V;
-		if (arab >= n.value) {
-			return n.name() + arabToRom(arab - n.value);
-		}
-		n = Numeral.I;
-		if (arab >= n.value) {
-			return n.name() + arabToRom(arab - n.value);
-		}
 		return "";
 	}
 
