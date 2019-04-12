@@ -36,9 +36,14 @@ public class ArabToRomTest {
 	void canConvert11() {
 		assertThat(arabToRom(11), is("XI"));
 	}
-	
+
 	private static enum Numeral {
-		X
+		X(10);
+		private int value;
+
+		private Numeral(int value) {
+			this.value = value;
+		}
 	}
 
 	private String arabToRom(int arab) {
