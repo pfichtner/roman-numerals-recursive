@@ -27,7 +27,7 @@ public class ArabToRomTest {
 			return "I" + arabToRom(2);
 		}
 		if (arab == 2) {
-			return "II";
+			return "I" + arabToRom(1);
 		}
 		return "I";
 	}
