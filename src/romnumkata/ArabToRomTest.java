@@ -23,12 +23,6 @@ public class ArabToRomTest {
 	}
 
 	private String arabToRom(int arab) {
-		if (arab == 3) {
-			return "I" + arabToRom(arab - 1);
-		}
-		if (arab == 2) {
-			return "I" + arabToRom(arab - 1);
-		}
 		if (arab >= 1) {
 			return "I" + arabToRom(arab - 1);
 		}
