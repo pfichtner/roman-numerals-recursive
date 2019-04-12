@@ -3,6 +3,9 @@ package romnumkata;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
+import java.util.EnumSet;
+import java.util.stream.Stream;
+
 import org.junit.jupiter.api.Test;
 
 public class ArabToRomTest {
@@ -57,6 +60,8 @@ public class ArabToRomTest {
 	}
 
 	private String arabToRom(int arab) {
+		Stream<String> map = EnumSet.allOf(Numeral.class).stream().filter(n->arab >= n.value).map(n->n.name() + arabToRom(arab - n.value));
+		String result = map.findFirst().orElse("");
 		for (Numeral n : Numeral.values()) {
 			if (arab >= n.value) {
 				return n.name() + arabToRom(arab - n.value);
