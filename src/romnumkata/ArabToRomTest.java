@@ -30,22 +30,22 @@ public class ArabToRomTest {
 		assertThat(arabToRom(9), is("IX"));
 	}
 
-	private static enum Numeral {
+	static enum Numeral {
 		X(10), IX(9), V(5), IV(4), I(1);
 		private int value;
 
 		private Numeral(int value) {
 			this.value = value;
 		}
+
+		private static Stream<ArabToRomTest.Numeral> numerals() {
+			return EnumSet.allOf(ArabToRomTest.Numeral.class).stream();
+		}
 	}
 
 	private String arabToRom(int arab) {
-		return numerals().filter(n -> arab >= n.value)
+		return Numeral.numerals().filter(n -> arab >= n.value)
 				.map(n -> n.name() + arabToRom(arab - n.value)).findFirst().orElse("");
-	}
-
-	private static Stream<Numeral> numerals() {
-		return EnumSet.allOf(Numeral.class).stream();
 	}
 
 }
