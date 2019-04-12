@@ -67,7 +67,7 @@ public class ArabToRomTest {
 				return n.name() + arabToRom(arab - n.value);
 			}
 		}
-		return "";
+		return result;
 	}
 
 }
