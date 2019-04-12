@@ -47,6 +47,12 @@ public class ArabToRomTest {
 	}
 
 	private String arabToRom(int arab) {
+		for (Numeral n : Numeral.values()) {
+			if (arab >= n.value) {
+				return n.name() + arabToRom(arab - n.value);
+			}
+		}
+		
 		Numeral n;
 		n = Numeral.X;
 		if (arab >= n.value) {
