@@ -57,8 +57,8 @@ public class ArabToRomTest {
 			return n.name() + arabToRom(arab - n.value);
 		}
 		n = Numeral.I;
-		if (arab >= 1) {
-			return "I" + arabToRom(arab - 1);
+		if (arab >= n.value) {
+			return n.name() + arabToRom(arab - n.value);
 		}
 		return "";
 	}
