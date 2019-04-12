@@ -38,8 +38,8 @@ public class ArabToRomTest {
 			this.value = value;
 		}
 
-		private static Stream<ArabToRomTest.Numeral> numerals() {
-			return EnumSet.allOf(ArabToRomTest.Numeral.class).stream();
+		private static Stream<Numeral> numerals() {
+			return EnumSet.allOf(Numeral.class).stream();
 		}
 	}
 
